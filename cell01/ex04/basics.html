@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basics</title>
+  <style>
+    /* พื้นหลังชมพูทั้งหน้า */
+    body {
+      margin: 0;
+      background-color: pink;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    /* หัวข้อใหญ่ สีขาว ตรงกลาง */
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      margin: 32px 12px;
+    }
+
+    /* โซนรูป 2 รูปเรียงข้างกัน */
+    .shops {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap; /* ให้ย่อเป็น 1 คอลัมน์ได้บนหน้าจอเล็ก */
+      padding: 0 16px 24px;
+    }
+    .shop {
+      width: min(420px, 46vw);
+      text-align: center;
+    }
+    .shop img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    .shop a {
+      display: inline-block;
+      margin-top: 8px;
+      text-decoration: underline;
+    }
+
+    /* เส้นคั่นเต็มกว้างหน้าต่าง */
+    hr {
+      width: 100%;
+      border: none;
+      border-top: 2px solid rgba(0,0,0,0.25);
+      margin: 24px 0;
+    }
+
+    /* บรรทัดล่างขวา: ตัวเอียง + monospace */
+    footer {
+      font-style: italic;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      text-align: right;
+      padding: 0 16px 24px;
+    }
+  </style>
+</head>
+<body>
+  <!-- หัวเรื่องต้องมีอักขระพิเศษอย่างน้อย 1 ตัว -->
+  <h1>Shop ★ &amp; Save!</h1>
+
+  <!-- รูป 2 รูปแทนร้านออนไลน์ + ลิงก์ใต้รูปให้ตรงกับเว็บ -->
+  <section class="shops">
+    <figure class="shop">
+      <!-- ใช้รูป placeholder; เปลี่ยน URL รูปได้ตามต้องการ -->
+      <img src="https://via.placeholder.com/800x500?text=Amazon" alt="Amazon storefront" />
+      <figcaption>
+        <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">Visit Amazon</a>
+      </figcaption>
+    </figure>
+
+    <figure class="shop">
+      <img src="https://via.placeholder.com/800x500?text=eBay" alt="eBay storefront" />
+      <figcaption>
+        <a href="https://www.ebay.com" target="_blank" rel="noopener noreferrer">Visit eBay</a>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- เส้นคั่นแนวนอน -->
+  <hr />
+
+  <!-- ข้อความลิขสิทธิ์ด้านขวา: © login + ปีปัจจุบัน -->
+  <footer>© your_login 2025</footer>
+</body>
+</html>

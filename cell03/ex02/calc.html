@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 02 – Calculator</title>
+</head>
+<body>
+  <h1>Basic Calculator</h1>
+
+  <!-- ฟอร์มเครื่องคิดเลข -->
+  <form id="calcForm">
+    <input type="text" id="left" placeholder="Left number">
+    <select id="op">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="right" placeholder="Right number">
+    <input type="submit" value="Try me!">
+  </form>
+
+  <script>
+    const form = document.getElementById('calcForm');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // กัน reload หน้า
+
+      const left = document.getElementById('left').value;
+      const right = document.getElementById('right').value;
+      const op = document.getElementById('op').value;
+
+      const a = parseInt(left, 10);
+      const b = parseInt(right, 10);
+
+      // ตรวจสอบว่ากรอกเป็น integer >= 0 หรือไม่
+      if (isNaN(a) || isNaN(b) || a < 0 || b < 0) {
+        alert("Error :(");
+        return;
+      }
+
+      let result;
+
+      // ตรวจสอบหารด้วยศูนย์
+      if ((op === '/' || op === '%') && b === 0) {
+        console.log("It's over 9000!");
+        alert("It's over 9000!");
+        return;
+      }
+
+      // คำนวณ
+      switch (op) {
+        case '+': result = a + b; break;
+        case '-': result = a - b; break;
+        case '*': result = a * b; break;
+        case '/': result = a / b; break;
+        case '%': result = a % b; break;
+      }
+
+      console.log(result);
+      alert(result);
+    });
+
+    // เตือนทุก 30 วินาที
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+</body>
+</html>

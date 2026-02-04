@@ -1,0 +1,10 @@
+body {
+  margin: 20px;
+  transition: background-color 0.5s; /* ทำให้สีเปลี่ยนแบบนุ่มนวล */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
