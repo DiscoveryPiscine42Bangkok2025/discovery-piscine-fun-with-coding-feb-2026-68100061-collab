@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Change Background</title>
-  <link rel="stylesheet" href="backgroound.css">
+    <meta charset="UTF-8">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="backgroound.css">
 </head>
 <body>
-  <button onclick="changeColor()">Click me!</button>
 
-  <script>
-    function changeColor() {
-      // สุ่มค่า RGB
-      let r = Math.floor(Math.random() * 256);
-      let g = Math.floor(Math.random() * 256);
-      let b = Math.floor(Math.random() * 256);
+<button onclick="changeColor()">Change background</button>
 
-      // เปลี่ยนสีพื้นหลัง
-      document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    }
-  </script>
+<script>
+function changeColor() {
+    const randomColor =
+        'rgb(' +
+        Math.floor(Math.random() * 256) + ',' +
+        Math.floor(Math.random() * 256) + ',' +
+        Math.floor(Math.random() * 256) +
+        ')';
+
+    document.body.style.backgroundColor = randomColor;
+}
+</script>
+
 </body>
 </html>

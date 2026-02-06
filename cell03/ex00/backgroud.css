@@ -1,10 +1,17 @@
 body {
-  margin: 20px;
-  transition: background-color 0.5s; /* ทำให้สีเปลี่ยนแบบนุ่มนวล */
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    font-family: Arial, sans-serif;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
 }
