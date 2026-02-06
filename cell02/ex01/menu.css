@@ -1,24 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Parallax Example</title>
-  <link rel="stylesheet" href="parallax.css">
-</head>
-<body>
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  <div class="parallax img1">
-    <div class="text">Welcome to My Parallax Page</div>
-  </div>
+/* body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 50px;
+}
 
-  <div class="content">
-    <h2>This is the black block section</h2>
-    <p>You can put any message here.</p>
-  </div>
+/* main menu */
+.menu {
+    list-style: none;
+    background-color: #333;
+    display: inline-block;
+}
 
-  <div class="parallax img2">
-    <div class="text">This is the Second Image</div>
-  </div>
+/* main items */
+.menu > li {
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding: 15px 25px;
+    cursor: pointer;
+}
 
-</body>
-</html>
+/* submenu */
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 180px;
+    display: none;
+}
+
+/* submenu items */
+.submenu li {
+    padding: 12px 15px;
+    color: #333;
+}
+
+/* hover effects */
+.submenu li:hover {
+    background-color: #eeeeee;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
